@@ -29,6 +29,13 @@ public class Member {
 		this.enrollDate = enrollDate;
 	}
 
+	public Member(String memberId, String memberName, String memberGender) {
+		// TODO Auto-generated constructor stub
+		this.memberId = memberId;
+		this.memberName = memberName;
+		this.memberGender = memberGender;
+	}
+
 	public int getMemberNo() {
 		return memberNo;
 	}
