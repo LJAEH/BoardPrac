@@ -16,7 +16,7 @@ public class MemberService {
 		Connection conn = getConnection();
 		
 		// dao 호출 결과 반환
-		Member all = dao.selectAll(conn);
+		List all = dao.selectAll(conn);
 		
 		// 커넥션 반환
 		close(conn);
