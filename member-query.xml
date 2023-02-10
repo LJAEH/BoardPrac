@@ -6,5 +6,30 @@
 	<entry key="seletAll">
 	SELECT MEMBER_ID, MEMBER_NM, MEMBER_GENDER 
 	FROM "MEMBER" 
+	WHERE SECESSION_FL = 'N'
+	ORDER_BY MEMBER_NO DESC
 	</entry>
+	
+	
+	<entry key="updateMember">
+	UPDATE MEMBER SET
+	MEMBER_NM = ?,
+	MEMBER_GENDER = ?
+	WHERE MEMBER_NO = ?
+	</entry>
+	
+	<entry key="updateMember">
+	UPDATE MEMBER SET
+	MEMBER_PW = ?,
+	WHERE MEMBER_NO = ?
+	AND MEMBER_PW = ?
+	</entry>
+	
+	<entry key="secession">
+	UPDATE MEMBER SET
+	SECESSION_FL = 'Y'
+	WHERE MEMBER_NO = ?
+	AND MEMBER_PW = ?
+	</entry>
+	
 </properties>

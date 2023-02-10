@@ -22,7 +22,8 @@ public class MainView {
 	private BoardView boardView = new BoardView();
 	
 	// 로그인된 회원정보를 저장할 객체를 참조하는 참조 변수
-	private static Member LoginMember = null;
+	public static Member LoginMember = null;
+	// 스태틱 선언하면 어디서든 받아 쓸 수 있음
 	// => 로그인 x == null
 	// => 로그인 o != null
 	
@@ -30,6 +31,8 @@ public class MainView {
 	/**
 	 * 메인 메뉴 출력 메서드
 	 */
+	int input = -1;
+	
 	public void mainMenu() {
 		/*
 		비회원
@@ -44,7 +47,7 @@ public class MainView {
 		99.프로그램 종료
 		*/
 		
-		int input = -1;
+		
 		
 		do {
 			try {
@@ -81,7 +84,7 @@ public class MainView {
 					
 					switch(input) {
 					case 1: memberView.memberMenu(LoginMember); break;// 회원기능 서브 메뉴 출력
-					case 2: boardView.boardMenu(LoginMember); break;// 게시판 기능 서브 메뉴 출력	
+					case 2: boardView.boardMenu(); break;// 게시판 기능 서브 메뉴 출력	
 					case 0: 
 						LoginMember = null; // <= 로그아웃
 						System.out.println("로그아웃 되었습니다.");
